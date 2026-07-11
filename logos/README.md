@@ -12,7 +12,10 @@ Wordmark: Geist Mono SemiBold (600), converted to outlines — no font needed to
 - **02_Secondary** — mark only
 - **03_Tertiary** — stacked lockup (mark above wordmark)
 - **04_CMYK** — the same three, in print colors
-- **05_Social** — baked-background icon and full-logo tiles, plus platform covers
+- **05_Social** — baked-background icon and full-logo tiles, plus platform covers.
+  `03_Covers` also holds polylane covers (`polylane_*_cover.png`): identical to the
+  coreplane ones — same mark, scale, and centering — with the wordmark reading
+  "polylane".
 
 ## Variants
 
