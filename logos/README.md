@@ -22,6 +22,12 @@ Mark-only files (Secondary, social icon) are byte-identical across the two brand
   identical to the coreplane ones — same mark, scale, and centering — with the
   wordmark reading "polylane". The polylane full-logo tiles follow the same rule:
   same mark scale as coreplane, shorter lockup recentered.
+  `04_Avatar` holds the polylane avatar on the same baked grounds as `01_Icon`.
+- **06_Avatar** — the polylane avatar: the Polylane companion face (speech bubble,
+  two dot eyes), polylane only. Path data is copied verbatim from `nominal`
+  (`packages/logos/polylane-face.ts`, the `dots` face), where it is the console and
+  docs favicon and app icon. Single colour with a true cutout interior, so there is
+  no Flat/Neutral split: `LightBg` is ink, `DarkBg` is cream.
 
 ## Variants
 
