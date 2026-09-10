@@ -39,6 +39,18 @@ On its named ground, Flat and Neutral look identical. The polylane face is a sin
 colour with a true cutout interior, so its Flat and Neutral files are the same drawing;
 both are kept so every variant name exists for both brands.
 
+Polylane also ships two colour variants of every face file, next to Flat/Neutral:
+
+- **Primary** — the face in brand green `#A8E840`; the wordmark keeps the ground's
+  foreground (ink on LightBg, cream on DarkBg). CMYK folders carry Primary as a spot
+  colour; they have no Gradient.
+- **Gradient** — the face filled with a linear gradient from `#B5FF3D` to `#54B86A`,
+  running from the top-right corner of the face's bounding box towards the bottom-left
+  (the end point sits 1.54 box widths left and 1.54 box heights below the start, so the
+  face shows the first two thirds of the ramp), plus a 16% grain texture masked to the
+  face. Geometry, stops and grain are taken from the brand's gradient lockup; the grain
+  is an embedded raster, which is why these SVGs are about 2 MB.
+
 ## Regenerating
 
 Assets are generated from `~/coreplanelabs/coreplaneai/public/logo.svg` geometry.
