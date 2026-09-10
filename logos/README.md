@@ -7,9 +7,13 @@ Colors: ink `#15151a`, cream `#fafaf7` (RGB). CMYK files use pure black/white fo
 Wordmark: Geist Mono SemiBold (600), converted to outlines — no font needed to use these files.
 
 Every folder holds both brands side by side: `Coreplane_*` and `Polylane_*` files.
-Polylane uses the same mark and metrics; only the wordmark differs ("polylane" is one
-monospace character shorter, so its lockups are 24 units narrower and recentered).
-Mark-only files (Secondary, social icon) are byte-identical across the two brands.
+Polylane keeps the same metrics but its mark is the Polylane avatar: the companion face
+(speech bubble, two dot eyes) that the console and docs use as favicon and app icon. The
+face sits in the same 64-unit slot the stack occupies, so lockup widths, gaps and the
+wordmark position are unchanged. Its path data is copied verbatim from `nominal`
+(`packages/logos/polylane-face.ts`, the `dots` face). The polylane wordmark is one
+monospace character shorter than coreplane's, so its lockups are 24 units narrower and
+recentered.
 
 ## Structure
 
@@ -22,12 +26,6 @@ Mark-only files (Secondary, social icon) are byte-identical across the two brand
   identical to the coreplane ones — same mark, scale, and centering — with the
   wordmark reading "polylane". The polylane full-logo tiles follow the same rule:
   same mark scale as coreplane, shorter lockup recentered.
-  `04_Avatar` holds the polylane avatar on the same baked grounds as `01_Icon`.
-- **06_Avatar** — the polylane avatar: the Polylane companion face (speech bubble,
-  two dot eyes), polylane only. Path data is copied verbatim from `nominal`
-  (`packages/logos/polylane-face.ts`, the `dots` face), where it is the console and
-  docs favicon and app icon. Single colour with a true cutout interior, so there is
-  no Flat/Neutral split: `LightBg` is ink, `DarkBg` is cream.
 
 ## Variants
 
@@ -37,7 +35,9 @@ Mark-only files (Secondary, social icon) are byte-identical across the two brand
 - **Neutral** — single color throughout; the top plane is a true cutout (transparent
   interior). Safe over any surface: photos, gradients, unknown grounds.
 
-On its named ground, Flat and Neutral look identical.
+On its named ground, Flat and Neutral look identical. The polylane face is a single
+colour with a true cutout interior, so its Flat and Neutral files are the same drawing;
+both are kept so every variant name exists for both brands.
 
 ## Regenerating
 
