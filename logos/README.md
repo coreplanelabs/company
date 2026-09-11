@@ -54,6 +54,17 @@ Polylane also ships two colour variants of every face file, next to Flat/Neutral
   face. Geometry, stops and grain are taken from the brand's gradient lockup; the grain
   is an embedded raster, which is why these SVGs are about 2 MB.
 
+The polylane social icon tile (`05_Social/01_Icon`) also ships two green-ground variants,
+for avatars where the tile itself should be brand green rather than the face:
+
+- **GreenBg_White** — brand green `#A8E840` tile with the face in cream `#fafaf7`
+  (the same "white" the DarkBg files use).
+- **GreenBg_Black** — brand green `#A8E840` tile with the face in ink `#15151a`.
+
+Same 128-unit canvas, face scale and centring as the other icon tiles; PNGs are 2000px.
+The transparent mark-only files (`02_Secondary`) have no green-ground variant — put the
+face on your own green.
+
 ## Regenerating
 
 Assets are generated from `~/coreplanelabs/coreplaneai/public/logo.svg` geometry.
