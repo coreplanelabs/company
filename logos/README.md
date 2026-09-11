@@ -7,13 +7,16 @@ Colors: ink `#15151a`, cream `#fafaf7` (RGB). CMYK files use pure black/white fo
 Wordmark: Geist Mono SemiBold (600), converted to outlines — no font needed to use these files.
 
 Every folder holds both brands side by side: `Coreplane_*` and `Polylane_*` files.
-Polylane keeps the same metrics but its mark is the Polylane avatar: the companion face
-(speech bubble, two dot eyes) that the console and docs use as favicon and app icon. The
-face sits in the same 64-unit slot the stack occupies, so lockup widths, gaps and the
-wordmark position are unchanged. Its path data is copied verbatim from `nominal`
-(`packages/logos/polylane-face.ts`, the `dots` face). The polylane wordmark is one
-monospace character shorter than coreplane's, so its lockups are 24 units narrower and
-recentered.
+Polylane keeps the same canvases but its mark is the Polylane avatar: the companion face
+(speech bubble, two dot eyes) that the console and docs use as favicon and app icon. Its
+path data is copied verbatim from `nominal` (`packages/logos/polylane-face.ts`, the `dots`
+face). Face-to-wordmark proportions follow the console's sidebar lockup (an 18px face
+beside a 12px wordmark with an 8px gap, centred): the face's ink is 1.145x the wordmark's
+full glyph height (ascender to descender), the gap from the face's ink to the first glyph
+is 0.714x that height, and the face is centred on the wordmark's box. Each lockup is
+recentred on its canvas; only the wordmark's position moves, never its outlines. The
+polylane wordmark is one monospace character shorter than coreplane's, so its lockups are
+24 units narrower and recentered.
 
 ## Structure
 
