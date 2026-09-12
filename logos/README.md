@@ -28,7 +28,9 @@ polylane wordmark is one monospace character shorter than coreplane's, so its lo
   platform covers. `03_Covers` also holds polylane covers (`polylane_*_cover.png`):
   identical to the coreplane ones — same mark, scale, and centering — with the
   wordmark reading "polylane". The polylane full-logo tiles follow the same rule:
-  same mark scale as coreplane, shorter lockup recentered.
+  same mark scale as coreplane, shorter lockup recentered. Each polylane cover also
+  ships a `polylane_*_cover_gradient` pair (SVG source plus PNG at the platform size)
+  on the green gradient ground described under Variants.
 
 ## Variants
 
@@ -54,6 +56,22 @@ Polylane also ships two colour variants of every face file, next to Flat/Neutral
   face. Geometry, stops and grain are taken from the brand's gradient lockup; the grain
   is an embedded raster, which is why these SVGs are about 2 MB.
 
+The polylane covers (`05_Social/03_Covers/polylane_*_cover_gradient.{svg,png}`) put the
+same ink lockup, at the same scale and position as the cream cover, on a full-bleed
+green ground instead of the face gradient:
+
+- The ground is the brand gradient `#B5FF3D` (top-right) to `#54B86A` (bottom-left).
+- One soft organic form is anchored off the top-left corner and bleeds off the top and
+  left edges: a pale body in `#E4FFC8` blurred heavily, sitting on a deeper rim in
+  `#5C8023` offset down and to the right, so the form reads as a lit body with a
+  shadowed contour. The form's size and blur scale with the canvas (by the square root
+  of its area), so the edge ramp is proportionally the same on every platform, and the
+  flat ground always covers the lockup's half of the canvas.
+- No grain: the ground is clean and smooth, and the lockup stays flat ink `#15151a`.
+
+The SVGs draw the form with `feGaussianBlur`, so they are a few KB; render them at the
+SVG's intrinsic size to reproduce the PNGs.
+
 The polylane social icon tile (`05_Social/01_Icon`) also ships two green-ground variants,
 for avatars where the tile itself should be brand green rather than the face:
 
@@ -68,4 +86,6 @@ face on your own green.
 ## Regenerating
 
 Assets are generated from `~/coreplanelabs/coreplaneai/public/logo.svg` geometry.
-SVGs are the source of truth; PNGs are rendered with `rsvg-convert`.
+SVGs are the source of truth; PNGs are rendered with `rsvg-convert`. The gradient covers
+use an SVG blur filter and were rendered with headless Chromium (Playwright) at the
+platform pixel size; `rsvg-convert` renders them too.
