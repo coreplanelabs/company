@@ -43,7 +43,7 @@ permissions: {}
 
 jobs:
   approve:
-    runs-on: ubuntu-latest
+    runs-on: namespace-profile-smidge
     if: >-
       (
         (github.event.review.user.login == 'claude[bot]' && github.event.review.user.id == 209825114) ||
