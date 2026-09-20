@@ -8,7 +8,7 @@ Wordmark: Geist Mono SemiBold (600), converted to outlines — no font needed to
 
 Every folder holds both brands side by side: `Coreplane_*` and `Polylane_*` files.
 Polylane keeps the same canvases but its mark is the Polylane avatar: the companion face
-(speech bubble, two dot eyes) that the console and docs use as favicon and app icon. Its
+(rounded outline, two dot eyes) that the console and docs use as favicon and app icon. Its
 path data is copied verbatim from `nominal` (`packages/logos/polylane-face.ts`, the `dots`
 face). Face-to-wordmark proportions follow the console's sidebar lockup (an 18px face
 beside a 12px wordmark with an 8px gap, centred): the face's ink is 1.145x the wordmark's
@@ -85,7 +85,8 @@ face on your own green.
 
 ## Regenerating
 
-Assets are generated from `~/coreplanelabs/coreplaneai/public/logo.svg` geometry.
-SVGs are the source of truth; PNGs are rendered with `rsvg-convert`. The gradient covers
+Coreplane assets use `~/coreplanelabs/coreplaneai/public/logo.svg`; Polylane face geometry
+comes from `~/coreplanelabs/nominal/packages/logos/polylane-face.ts`. SVGs are the source
+of truth; PNGs are rendered with `rsvg-convert`. The gradient covers
 use an SVG blur filter and were rendered with headless Chromium (Playwright) at the
 platform pixel size; `rsvg-convert` renders them too.
