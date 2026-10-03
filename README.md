@@ -10,9 +10,11 @@ Details about the founder [here](./founder/README.md).
 
 # Logos
 
-All logo variants are in [`logos/`](./logos) — see the [README](./logos/README.md) there
-for the variant system (Primary/Secondary/Tertiary, Flat/Neutral, RGB/CMYK, social,
-the polylane Primary and Gradient colour variants, and the green-ground GreenBg_White /
-GreenBg_Black avatar tiles).
-Social covers and avatar tiles live in [`logos/05_Social/`](./logos/05_Social); the polylane
-covers come in cream and in a green-gradient-ground version (`polylane_*_cover_gradient`).
+All logo variants are in [`logos/`](./logos). Its [README](./logos/README.md) covers both
+brands: the variant system (Primary/Secondary/Tertiary, Flat/Neutral, RGB/CMYK, social
+tiles), Polylane's face, wordmark, proportions and Fern colors, and which file to use where.
+
+# Social
+
+Polylane's profile headers for X, LinkedIn, GitHub and YouTube, and its avatars, are in
+[`social/`](./social). Its [README](./social/README.md) says which file goes where.
