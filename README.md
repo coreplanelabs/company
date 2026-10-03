@@ -16,3 +16,8 @@ the polylane Primary and Gradient colour variants, and the green-ground GreenBg_
 GreenBg_Black avatar tiles).
 Social covers and avatar tiles live in [`logos/05_Social/`](./logos/05_Social); the polylane
 covers come in cream and in a green-gradient-ground version (`polylane_*_cover_gradient`).
+
+# Social
+
+Polylane's profile headers for X, LinkedIn, GitHub and YouTube, and its avatars, are in
+[`social/`](./social). Its [README](./social/README.md) says which file goes where.
