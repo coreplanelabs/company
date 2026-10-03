@@ -1,92 +1,88 @@
 # coreplane + polylane logos
 
-The mark is "the stack": three planes in section, the middle one solid — the plane
+Every folder holds both brands side by side: `Coreplane_*` and `Polylane_*` files. Both use
+the same canvases, folder structure and variant names.
+
+## Coreplane
+
+The mark is "the stack": three planes in section, the middle one solid. It is the plane
 between the data plane and the control plane, the one that runs itself.
 
-Colors: ink `#15151a`, cream `#fafaf7` (RGB). CMYK files use pure black/white for print.
-Wordmark: Geist Mono SemiBold (600), converted to outlines — no font needed to use these files.
+Colors: ink `#15151a`, cream `#fafaf7` (RGB). CMYK files use pure black and white for print.
+Wordmark: Geist Mono SemiBold (600), converted to outlines, so no font is needed to use
+these files.
 
-Every folder holds both brands side by side: `Coreplane_*` and `Polylane_*` files.
-Polylane keeps the same canvases but its mark is the Polylane avatar: the companion face
-(rounded outline, two dot eyes) that the console and docs use as favicon and app icon. Its
-path data is copied verbatim from `nominal` (`packages/logos/polylane-face.ts`, the `dots`
-face). Face-to-wordmark proportions follow the console's sidebar lockup (an 18px face
-beside a 12px wordmark with an 8px gap, centred): the face's ink is 1.145x the wordmark's
-full glyph height (ascender to descender), the gap from the face's ink to the first glyph
-is 0.714x that height, and the face is centred on the wordmark's box. Each lockup is
-recentred on its canvas; only the wordmark's position moves, never its outlines. The
-polylane wordmark is one monospace character shorter than coreplane's, so its lockups are
-24 units narrower and recentered.
+## Polylane
+
+The mark is the Polylane face: a rounded outline with a notch on top and two dot eyes. It is
+the agent that lives in your production. The face is drawn with continuous curvature, so its
+corners bend smoothly the way Apple's do, and its ring is an even weight all the way round.
+
+The wordmark is "polylane" in Söhne Mono Kräftig, with the "l" redrawn to a curved shoulder.
+It is converted to outlines, so no font is needed to use these files.
+
+Proportions are measured in the wordmark's x-height:
+
+- **Face height:** 2 x-heights, centred on the x-height band.
+- **Gap:** 1 x-height between the face and the word.
+- **Stacked:** the face is centred over the word, 1 x-height above the top of the "l".
+
+At this size the face's ring is as thick as the letters' stroke, each eye is the size of the
+counter in the "o", and the face spans the word from the top of the "l" to the bottom of the
+"p".
+
+Colors:
+
+| Name | Hex | Use |
+|---|---|---|
+| Fern | `#29E047` | The face on light grounds |
+| Fern dark | `#3FF35D` | The face on dark grounds |
+| Ink | `#15151A` | Wordmark and single-color files on light |
+| Cream | `#FAFAF7` | Wordmark and single-color files on dark |
+| White | `#FFFFFF` | Light tile ground |
+| Black | `#131416` | Dark tile ground |
+
+Never put white or cream on Fern: on a green ground the face is ink.
 
 ## Structure
 
-- **01_Primary** — horizontal lockup (mark + wordmark)
-- **02_Secondary** — mark only
-- **03_Tertiary** — stacked lockup (mark above wordmark)
-- **04_CMYK** — the same three, in print colors
-- **05_Social** — baked-background icon and full-logo tiles (both brands), plus
-  platform covers. `03_Covers` also holds polylane covers (`polylane_*_cover.png`):
-  identical to the coreplane ones — same mark, scale, and centering — with the
-  wordmark reading "polylane". The polylane full-logo tiles follow the same rule:
-  same mark scale as coreplane, shorter lockup recentered. Each polylane cover also
-  ships a `polylane_*_cover_gradient` pair (SVG source plus PNG at the platform size)
-  on the green gradient ground described under Variants.
+- **01_Primary:** horizontal logo (mark + wordmark).
+- **02_Secondary:** mark only.
+- **03_Tertiary:** stacked logo (mark above wordmark).
+- **04_CMYK:** the same three, in print colors.
+- **05_Social:** icon and full-logo tiles with the ground baked in, plus Coreplane's platform
+  covers. Polylane's profile headers and avatars live in [`social/`](../social).
 
 ## Variants
 
-- **LightBg / DarkBg** — which ground the file is meant for. Transparent background;
-  the ink flips (ink on light, cream on dark).
-- **Flat** — the top plane is filled with the named ground color. Use only on that ground.
-- **Neutral** — single color throughout; the top plane is a true cutout (transparent
-  interior). Safe over any surface: photos, gradients, unknown grounds.
+- **LightBg / DarkBg:** which ground the file is meant for. The background is transparent and
+  the ink flips: ink on light, cream on dark.
+- **Flat:** the top plane is filled with the named ground color. Use it only on that ground.
+- **Neutral:** single color throughout, with a true cutout interior. Safe over any surface:
+  photos, gradients, unknown grounds.
 
-On its named ground, Flat and Neutral look identical. The polylane face is a single
-colour with a true cutout interior, so its Flat and Neutral files are the same drawing;
-both are kept so every variant name exists for both brands.
+On its named ground, Flat and Neutral look identical. The Polylane face has a true cutout
+interior, so its Flat and Neutral files are the same drawing. Both are kept so every variant
+name exists for both brands.
 
-Polylane also ships two colour variants of every face file, next to Flat/Neutral:
+Polylane also ships a **Primary** color variant of every file: the face in Fern (`#29E047`
+on LightBg, `#3FF35D` on DarkBg) with the wordmark in the ground's foreground color. CMYK
+folders carry the same greens as placeholders for a spot color; no print match has been
+chosen yet.
 
-- **Primary** — the face in brand green `#A8E840`; the wordmark keeps the ground's
-  foreground (ink on LightBg, cream on DarkBg). CMYK folders carry Primary as a spot
-  colour; they have no Gradient.
-- **Gradient** — the face filled with a linear gradient from `#B5FF3D` to `#54B86A`,
-  running from the top-right corner of the face's bounding box towards the bottom-left
-  (the end point sits 1.54 box widths left and 1.54 box heights below the start, so the
-  face shows the first two thirds of the ramp), plus a 16% grain texture masked to the
-  face. Geometry, stops and grain are taken from the brand's gradient lockup; the grain
-  is an embedded raster, which is why these SVGs are about 2 MB.
+Polylane's icon tiles (`05_Social/01_Icon`) are drawn like its avatars: the face is 60% of
+the tile wide and centred.
 
-The polylane covers (`05_Social/03_Covers/polylane_*_cover_gradient.{svg,png}`) put the
-same ink lockup, at the same scale and position as the cream cover, on a full-bleed
-green ground instead of the face gradient:
+- **DarkBg / LightBg:** cream face on black, ink face on white.
+- **DarkBg_Primary / LightBg_Primary:** Fern face on black or white.
+- **GreenBg_Black:** ink face on a Fern tile.
 
-- The ground is the brand gradient `#B5FF3D` (top-right) to `#54B86A` (bottom-left).
-- One soft organic form is anchored off the top-left corner and bleeds off the top and
-  left edges: a pale body in `#E4FFC8` blurred heavily, sitting on a deeper rim in
-  `#5C8023` offset down and to the right, so the form reads as a lit body with a
-  shadowed contour. The form's size and blur scale with the canvas (by the square root
-  of its area), so the edge ramp is proportionally the same on every platform, and the
-  flat ground always covers the lockup's half of the canvas.
-- No grain: the ground is clean and smooth, and the lockup stays flat ink `#15151a`.
-
-The SVGs draw the form with `feGaussianBlur`, so they are a few KB; render them at the
-SVG's intrinsic size to reproduce the PNGs.
-
-The polylane social icon tile (`05_Social/01_Icon`) also ships two green-ground variants,
-for avatars where the tile itself should be brand green rather than the face:
-
-- **GreenBg_White** — brand green `#A8E840` tile with the face in cream `#fafaf7`
-  (the same "white" the DarkBg files use).
-- **GreenBg_Black** — brand green `#A8E840` tile with the face in ink `#15151a`.
-
-Same 128-unit canvas, face scale and centring as the other icon tiles; PNGs are 2000px.
-The transparent mark-only files (`02_Secondary`) have no green-ground variant — put the
-face on your own green.
+Its full-logo tiles (`05_Social/02_FullLogo`) centre the horizontal logo at 64% of the tile
+width.
 
 ## Regenerating
 
-Coreplane assets use `~/coreplanelabs/coreplaneai/public/logo.svg`; Polylane face geometry
-comes from `~/coreplanelabs/nominal/packages/logos/polylane-face.ts`. SVGs are the source
-of truth; PNGs are rendered with `rsvg-convert`. The gradient covers
-use an SVG blur filter and were rendered with headless Chromium (Playwright) at the
-platform pixel size; `rsvg-convert` renders them too.
+SVGs are the source of truth and PNGs are rendered from them at the sizes in each folder.
+Coreplane assets come from `~/coreplanelabs/coreplaneai/public/logo.svg` and are rendered with
+`rsvg-convert`. Polylane files are generated from the brand masters (the face and the outlined
+wordmark) by a script, and rendered with resvg.
